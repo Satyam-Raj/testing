@@ -7,3 +7,4 @@ class Something(models.Model):
     email       =       models.EmailField(max_length=100)
     description =       models.TextField()
     height      =       models.IntegerField()
+    #some_image  =       models.ImageField(upload_to='media', null =True, blank=True)
