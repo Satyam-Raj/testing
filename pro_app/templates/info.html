@@ -1,0 +1,20 @@
+{%  block content %}
+
+<h1>Something info</h1>
+
+
+
+<div style="text-align: left; background-color: rgb(229, 255, 0);">
+{%  for criteria in criterias %}
+
+<ul>
+    <li>name: {{  criteria.name }}</li>
+    <li>age: {{  criteria.age }}</li>
+    <li>email: {{  criteria.email }}</li>
+    <li>gender: {{ criteria.gender }}</li>
+</ul>
+
+{% endfor %}
+
+</div>
+{%  endblock %}

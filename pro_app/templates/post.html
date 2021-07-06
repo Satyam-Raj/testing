@@ -1,0 +1,31 @@
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Django App1</title>
+</head>
+
+<div>
+    <a href="{% url 'info' %}">Info</a>
+</div>
+<form method="POST" enctype="multipart/form-data">
+<div style="text-align:center">
+{% csrf_token %}
+{{ form.as_p }}
+
+<input type="submit" class="btnbtn-primary" value="Save">
+</div>
+</form>
+<h1>Hello!</h1>
+
+<img src="{% static 'pic.jpg' %}">
+
+</body>
+</html>
+
+
+{% endblock %}
