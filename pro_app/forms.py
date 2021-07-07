@@ -11,5 +11,5 @@ class Valueform(forms.ModelForm):
             'email',
             'description',
             'height',
-            'some_image',
+            'some_image'
         ]

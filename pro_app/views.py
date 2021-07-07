@@ -5,12 +5,13 @@ from .forms import Valueform
 
 def form_view(request):
     form = Valueform(request.POST or None)
-    if form.is_valid():
-        form.save()
+    if request.method == 'POST':
+        form = Valueform(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
 
-        form = Valueform()
+            form = Valueform()
     return render(request, 'post.html',{'form':form})
-
 
 
 
@@ -20,6 +21,4 @@ def info_view(request):
 
         "criterias" : criterias
     }
-
-
     return render(request, 'info.html', context)
