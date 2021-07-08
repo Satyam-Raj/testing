@@ -9,6 +9,9 @@
 <title>Django App1</title>
 </head>
 
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
 <div>
     <a href="{% url 'info' %}">Info</a>
 </div>
@@ -26,7 +29,7 @@
 
 <h1>Hello!</h1>
 
-<img src="{% static 'pic.jpg' %}">
+<img src="{% static 'images/pic.jpg' %}">
 
 </body>
 </html>
